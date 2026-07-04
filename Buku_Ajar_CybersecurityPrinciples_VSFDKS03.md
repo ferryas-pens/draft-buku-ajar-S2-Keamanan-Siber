@@ -4254,14 +4254,18 @@ Laporan gap analysis yang baik harus mencakup:
 ### 5.1 Gap Analysis Heatmap
 
 ```mermaid
+---
+config:
+  layout: elk
+---
 quadrantChart
     title Gap Analysis Heatmap — Prioritas Remediasi
     x-axis Rendah Kompleksitas Remediasi --> Tinggi
     y-axis Rendah Tingkat Risiko --> Tinggi
-    quadrant-1 Prioritas Tinggi (Quick Win Tinggi Risiko)
-    quadrant-2 Prioritas Sangat Tinggi (Proyek Besar)
-    quadrant-3 Pertimbangkan (Quick Win Rendah Risiko)
-    quadrant-4 Pertimbangkan Jangka Panjang
+    quadrant-1 "Prioritas Tinggi (Quick Win Tinggi Risiko)"
+    quadrant-2 "Prioritas Sangat Tinggi (Proyek Besar)"
+    quadrant-3 "Pertimbangkan (Quick Win Rendah Risiko)"
+    quadrant-4 "Pertimbangkan Jangka Panjang"
     GV.RM Risk Strategy: [0.2, 0.9]
     DE.CM Monitoring: [0.7, 0.85]
     RS.MA Incident Response: [0.3, 0.8]
